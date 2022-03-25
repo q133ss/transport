@@ -1,0 +1,73 @@
+// Footer and Custom Footer
+.footer-logo{
+	img{
+		max-height: 48px;
+	}
+}
+// Default Footer
+.site-footer-default {
+	background-color: $color_dark;
+	.default-copyright{
+		padding: 28px 0;
+		font-size: 15px;
+		color: #83868c;
+		a{
+			color: $primary_color;
+		}
+	}
+}
+.site-footer-custom{
+	p:last-child{
+		margin-bottom: 0;
+	}
+}
+body .scroll-top {
+	position: fixed;
+	z-index: 99;
+	bottom: 24px;
+	right: 30px;
+	height: 48px;
+	width: 48px;
+	line-height: 48px;
+	text-align: center;
+	background-color: $primary_color;
+	@include border-radius(2px);
+	color: #fff;
+	font-size: 22px;
+	opacity: 0;
+	visibility: hidden;
+	&:hover, &:focus, &:active {
+		color: #fff;
+		background-color: darken($primary_color, 0.05);
+	}
+	&.on {
+		bottom: 44px;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+//Custom Footer posttype
+.site-footer-custom .footer-custom-inner,body.single-footer .site-content{
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	.footer-social{
+		.elementor-social-icon:hover{
+			background-color: $primary_color !important;
+		}
+	}
+	.gallery{
+		margin: 35px -5px 0 -5px;
+		.gallery-item{
+			padding: 0 5px;
+			margin: 0 0 10px !important;
+		}
+	}
+	.cms-navigation-menu1.default{
+		a{
+			font-size: 14px;
+			line-height: 33px;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.etc-group-item{
+	border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.etc-group-delete{
+	position: absolute;
+    z-index: 9;
+    right: 10px;
+    top: 8px;
+}

@@ -1,0 +1,11 @@
+<?php
+
+class ETC_CmsButton_Widget extends Elementor_Theme_Core_Widget_Base{
+    protected $name = 'cms_button';
+    protected $title = 'Button';
+    protected $icon = 'eicon-button';
+    protected $categories = array( 'elementor-theme-core' );
+    protected $params = '{"sections":[{"name":"source_section","label":"Source Settings","tab":"content","controls":[{"name":"style","label":"Style","type":"select","default":"btn-default","options":{"btn-default":"Default","btn-secondary":"Secondary","btn-outline":"Outline","btn-white":"White","btn-outline-white":"Outline White"}},{"name":"size_height","label":"Size Height","type":"select","default":"size-normal","options":{"size-normal":"Normal","size-small":"Small","size-big":"Big"}},{"name":"text","label":"Text","type":"text","default":"Click here","placeholder":"Click here"},{"name":"link","label":"Link","type":"url","placeholder":"https:\/\/your-link.com","default":{"url":"#"}},{"name":"align","label":"Alignment","type":"choose","options":{"left":{"title":"Left","icon":"fa fa-align-left"},"center":{"title":"Center","icon":"fa fa-align-center"},"right":{"title":"Right","icon":"fa fa-align-right"},"justify":{"title":"Justified","icon":"fa fa-align-justify"}},"prefix_class":"elementor-align-","default":""},{"name":"btn_icon","label":"Icon","type":"icons","label_block":true,"fa4compatibility":"icon"},{"name":"icon_align","label":"Icon Position","type":"select","default":"left","options":{"left":"Before","right":"After"},"condition":{"btn_icon!":""}},{"name":"icon_space_left","label":"Space Left","type":"slider","control_type":"responsive","size_units":["px"],"default":{"size":0},"range":{"px":{"min":0,"max":100}},"selectors":{"{{WRAPPER}} .cms-align-icon-right":"margin-left: {{SIZE}}{{UNIT}};"},"condition":{"btn_icon!":"","icon_align!":"left"}},{"name":"icon_space_right","label":"Space Right","type":"slider","control_type":"responsive","size_units":["px"],"default":{"size":0},"range":{"px":{"min":0,"max":100}},"selectors":{"{{WRAPPER}} .cms-align-icon-left":"margin-right: {{SIZE}}{{UNIT}};"},"condition":{"btn_icon!":"","icon_align!":"right"}}]}]}';
+    protected $styles = array(  );
+    protected $scripts = array(  );
+}

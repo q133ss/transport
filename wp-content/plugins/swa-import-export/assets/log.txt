@@ -1,0 +1,8 @@
+
+
+
+Set home page successfully!
+Import menus successfully!
+Import wp options successfully!
+Crop images successfully!
+Import term meta successfully!

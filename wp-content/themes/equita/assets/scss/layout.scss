@@ -1,0 +1,115 @@
+/* Sticky Sidebar */
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+}
+.admin-bar .sidebar-sticky {
+  top: 60px;
+}
+.header-sticky .sidebar-sticky {
+  top: 110px;
+}
+.admin-bar.header-sticky .sidebar-sticky {
+  top: 140px;
+}
+
+.entry-content .page-links {
+  clear: left;
+  padding-top: 10px;
+  span {
+    text-align: center;
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    line-height: 26px;
+    color: #fff;
+    @include border-radius(26px);
+    background-color: $primary_color;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 3px;
+    @include transition(all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s);
+  }
+  a span {
+    background-color: #e0e3e8;
+    color: #000;
+    &:hover {
+      background-color: $primary_color;
+      color: #fff;
+    }
+  }
+  .post-page-numbers {
+    margin: 0 3px;
+    span {
+      margin: 0;
+    }
+  }
+}
+@media #{$min-xxl} {
+  body {
+    .container {
+      max-width: 1200px;
+      width: 100%;
+    }
+    #primary.content-has-sidebar {
+      -ms-flex: 0 0 68.3%;
+      flex: 0 0 68.3%;
+      max-width: 68.3%;
+      &.float-left + #secondary {
+        padding-left: 35px;
+      }
+      &.float-right + #secondary {
+        padding-right: 35px;
+      }
+    }
+    #secondary.widget-has-sidebar {
+      -ms-flex: 0 0 31.7%;
+      flex: 0 0 31.7%;
+      max-width: 31.7%;
+    }
+  }
+}
+@media #{$max-lg} {
+  body .container {
+    max-width: 100%;
+  }
+}
+@media #{$max-md} {
+  #primary + #secondary {
+    margin-top: 60px;
+  }
+}
+.site-content {
+  padding: 130px 0 110px;
+  position: relative;
+  @media #{$max-md} {
+    overflow: hidden;
+  }
+}
+.layout-container {
+  background-color: #fcfcfc;
+  padding-bottom: 55px;
+}
+.widget .widget-content ul:not(.entry-meta) {
+  margin: 0;
+  list-style: none;
+}
+.page-template-default .entry-footer {
+	text-align: center;
+	i {
+		padding-right: 8px;
+	}
+}
+@media #{$min-lg} {
+  .content-has-sidebar.float-right {
+    order: 2;
+    -webkit-order: 2;
+    -ms-order: 2;
+    + #secondary {
+      order: 1;
+      -webkit-order: 1;
+      -ms-order: 1;
+    }
+  }
+}

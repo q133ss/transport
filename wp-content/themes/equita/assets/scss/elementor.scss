@@ -1,0 +1,114 @@
+/* reset heading margin*/
+.elementor-element {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        margin: 0;
+    }
+}
+
+.elementor-element .elementor-widget:not(:last-child) {
+    margin-bottom: 0;
+}
+
+.elementor .elementor-section.elementor-section-boxed > .elementor-container {
+    &.elementor-column-gap-no {
+        max-width: 1170px;
+    }
+    &.elementor-column-gap-default {
+        max-width: 1190px;
+    }
+    &.elementor-column-gap-extended {
+        max-width: 1200px;
+    }
+}
+.site-content, .site-footer-custom {
+    .elementor-row{
+        justify-content: space-between;
+    }
+    .elementor-container {
+        &.elementor-column-gap-default {
+            margin: 0 -10px;
+        }
+        &.elementor-column-gap-extended {
+            margin: 0 -15px;
+        }
+    }
+    .elementor-section-stretched.elementor-section-boxed .elementor-container.elementor-column-gap-default {
+        margin: 0 auto;
+        .elementor-row {
+            .elementor-column-gap-extended {
+                margin: 0 -15px;
+            }
+            .elementor-column-gap-default {
+                margin: 0 -10px;
+            }
+        }
+    }
+    .elementor-section-stretched.elementor-section-boxed .elementor-container.elementor-column-gap-extended {
+        margin: 0 auto;
+        .elementor-row {
+            .elementor-column-gap-extended {
+                margin: 0 -15px;
+            }
+            .elementor-column-gap-default {
+                margin: 0 -10px;
+            }
+        }
+    }
+    .elementor-element-edit-mode.elementor-section-boxed .elementor-container{
+        margin: 0 auto;
+    }
+
+    // Text Editor
+    .elementor-widget-text-editor {
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    }
+
+    // Icon List
+    .elementor-widget-icon-list .elementor-icon-list-item {
+        font-family: inherit;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    // Image Box
+    .elementor-widget-image-box {
+        .elementor-image-box-content{
+            .elementor-image-box-title{
+                @include font-family-heading($heading_default_font);
+            }
+            .elementor-image-box-description{
+                color: inherit;
+                font-family: inherit;
+                font-weight: inherit;
+            }
+        }
+    }
+
+    // Image
+    .elementor-widget-image{
+        overflow: hidden;
+    }
+    .fa{
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+    .cms-dropcap .elementor-drop-cap{
+        margin-top: -13px;
+    }
+}
+.single-footer, .elementor_library-template-default.single-elementor_library {
+    #colophon {
+        display: none;
+    }
+}
+
+@media #{$max-lg} {
+    .col-offset-left > .elementor-column-wrap .elementor-widget-wrap {
+        padding-left: 0 !important;
+    }
+    .col-offset-right > .elementor-column-wrap .elementor-widget-wrap {
+        padding-right: 0 !important;
+    }
+}

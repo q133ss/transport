@@ -1,0 +1,1 @@
+<?php equita_breadcrumb(); ?>
